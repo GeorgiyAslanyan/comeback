@@ -1,0 +1,47 @@
+.dialogs a {
+    text-decoration: none;
+}
+
+.dialog {
+    display: flex;
+    vertical-align: center;
+}
+
+.dialog img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+a.active .dialog {
+    padding: 10px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.dialog {
+    padding: 10px;
+    background-color: #5e5e5e;
+    color: white;
+}
+
+.dialog h2 {
+    margin-bottom: 10px;
+}
+
+.dialog:hover{
+    background-color: #6c6c6c;
+}
+
+.dialog p {
+    font-size: 15px;
+    color: #b6b6b6;
+    margin: 0;
+}
+
+a.active .dialog p {
+    font-size: 15px;
+    color: white;
+    margin: 0;
+}
