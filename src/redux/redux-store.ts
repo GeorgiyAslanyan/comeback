@@ -1,11 +1,13 @@
 import {Action, applyMiddleware, combineReducers, createStore} from 'redux'
 import thunk, {ThunkAction} from "redux-thunk";
-import dialogsReducer from "./dialogs-reducer.js";
-import dialogReducer from "./dialog-reducer.js";
+import authReducer from "./auth-reducer";
+import dialogReducer from "./dialog-reducer";
+import dialogsReducer from "./dialogs-reducer";
 
 let rootReducer = combineReducers({
     dialogs: dialogsReducer,
-    dialog: dialogReducer
+    dialog: dialogReducer,
+    auth: authReducer
 })
 
 type RootReducerType = typeof rootReducer

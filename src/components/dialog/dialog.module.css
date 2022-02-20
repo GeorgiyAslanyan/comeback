@@ -1,0 +1,29 @@
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.myMessage {
+    margin: 5px 5px 5px auto;
+    padding: 5px 10px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 20px 20px 5px 20px;
+}
+
+.myMessage p{
+    margin: 5px 5px 8px 5px;
+}
+
+.message {
+    margin: 5px auto 5px 5px;
+    padding: 5px 10px;
+    background-color: #eaeaea;
+    color: black;
+    border-radius: 20px 20px 20px 5px;
+
+}
+
+.message p {
+    margin: 5px 5px 8px 5px;
+}

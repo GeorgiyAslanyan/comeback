@@ -15,7 +15,7 @@ class App extends React.Component {
                 </div>
                 <div className={s.content}>
                     <Routes>
-                        <Route path='/dialogs/:dialogsId?' element={<Dialog/>} />
+                        <Route path='/dialogs/:dialogsId' element={<Dialog/>} />
                     </Routes>
                 </div>
             </div>
