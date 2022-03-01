@@ -1,8 +1,8 @@
 import React from "react";
 import {useSelector} from "react-redux";
 import s from './dialog.module.css'
-import {getDialog} from "../../redux/dialog-selector";
-import {getAuthUserId} from "../../redux/auth-selector";
+import {getDialog} from "../../../redux/dialog-selector";
+import {getAuthUserId} from "../../../redux/auth-selector";
 
 type PropsType = {}
 

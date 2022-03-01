@@ -1,0 +1,20 @@
+.headerElements {
+    min-height: 50px;
+    background-color: #2b3031;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerElements a{
+    transition: .3s background-color;
+}
+
+.headerElements a:hover{
+    background-color: dodgerblue;
+}
+
+.headerElements img{
+    max-height: 30px;
+    padding: 10px 20px;
+}

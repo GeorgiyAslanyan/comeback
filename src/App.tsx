@@ -1,8 +1,9 @@
 import React from 'react';
 import s from './App.module.css'
 import {Route, Routes} from "react-router-dom";
-import Dialogs from './components/dialogs/Dialogs'
-import Dialog from "./components/dialog/Dialog";
+import Header from "./components/header/Header";
+import Messages from "./components/messages/Messages";
+import Dialog from "./components/messages/dialog/Dialog";
 
 class App extends React.Component {
 
@@ -10,12 +11,10 @@ class App extends React.Component {
     render() {
         return (
             <div className={s.app}>
-                <div className={s.people}>
-                    <Dialogs />
-                </div>
-                <div className={s.content}>
+                <Header/>
+                <div className={s.appContent}>
                     <Routes>
-                        <Route path='/dialogs/:dialogsId' element={<Dialog/>} />
+                        <Route path='/dialogs/*' element={<Messages/>}/>
                     </Routes>
                 </div>
             </div>
