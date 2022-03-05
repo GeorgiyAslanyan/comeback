@@ -3,11 +3,13 @@ import thunk, {ThunkAction} from "redux-thunk";
 import authReducer from "./auth-reducer";
 import dialogReducer from "./dialog-reducer";
 import dialogsReducer from "./dialogs-reducer";
+import profileReducer from "./profile-reducer";
 
 let rootReducer = combineReducers({
     dialogs: dialogsReducer,
     dialog: dialogReducer,
-    auth: authReducer
+    auth: authReducer,
+    profile: profileReducer
 })
 
 type RootReducerType = typeof rootReducer

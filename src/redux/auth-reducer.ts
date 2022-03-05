@@ -4,6 +4,7 @@ import {BaseThunkType, InferActionsTypes} from "./redux-store";
 let initialState = {
     filter: null as string | null,
     userId: 1 as number | null,
+    isAuth: false as boolean
 }
 
 const authReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
@@ -13,6 +14,11 @@ const authReducer = (state = initialState, action: ActionsTypes): InitialStateTy
                 ...state,
                 userId: action.userId
             }
+        case "SET-IS_AUTH":
+            return {
+                ...state,
+                isAuth: action.isAuth
+            }
         default:
             return state
     }
@@ -21,12 +27,12 @@ const authReducer = (state = initialState, action: ActionsTypes): InitialStateTy
 
 export const actions = {
     setUserId: (userId: number) => ({type: 'SET-USER-ID', userId} as const),
+    setIsAuth: (isAuth: boolean) => ({type: 'SET-IS_AUTH', isAuth} as const),
 }
 //
-// export const requestCategories = (): ThunkType => async (dispatch, getState) => {
-//     let data = await CategoriesAPI.getCategories()
-//     dispatch(actions.setCategories(data.items))
-// }
+export const setIsAuth = (meaning: boolean): ThunkType => async (dispatch, getState) => {
+    dispatch(actions.setIsAuth(meaning))
+}
 
 
 export default authReducer

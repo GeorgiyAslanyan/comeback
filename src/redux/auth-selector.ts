@@ -3,6 +3,10 @@ import {AppStateType} from "./redux-store";
 export const getAuthUserId = (state: AppStateType) => {
     return state.auth.userId
 }
+
+export const getIsAuth = (state: AppStateType) => {
+    return state.auth.isAuth
+}
 //
 // export const getVideosFilter = (state: AppStateType) => {
 //     return state.videosPage.filter

@@ -18,3 +18,14 @@
     max-height: 30px;
     padding: 10px 20px;
 }
+
+.authButton button {
+    background: 0;
+    border: 0;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.authButton button:hover {
+    background-color: #727272;
+}

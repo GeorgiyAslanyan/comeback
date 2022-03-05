@@ -3,7 +3,8 @@ import s from './App.module.css'
 import {Route, Routes} from "react-router-dom";
 import Header from "./components/header/Header";
 import Messages from "./components/messages/Messages";
-import Dialog from "./components/messages/dialog/Dialog";
+import Settings from "./components/settings/Settings";
+import Profile from "./components/profile/Profile";
 
 class App extends React.Component {
 
@@ -15,6 +16,8 @@ class App extends React.Component {
                 <div className={s.appContent}>
                     <Routes>
                         <Route path='/dialogs/*' element={<Messages/>}/>
+                        <Route path='/settings/*' element={<Settings/>}/>
+                        <Route path='/profile/*' element={<Profile/>}/>
                     </Routes>
                 </div>
             </div>
