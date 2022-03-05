@@ -1,20 +1,92 @@
 .headerElements {
-    min-height: 50px;
+    min-height: 65px;
     background-color: #2b3031;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.headerElements a{
-    transition: .3s background-color;
+.headerElements a {
+    padding: 0 5px;
+    transition: .3s background-color, border-radius .3s;
 }
 
-.headerElements a:hover{
+.headerElements a:hover {
     background-color: dodgerblue;
+    border-radius: 56px;
 }
 
-.headerElements img{
+/* Settings */
+.headerElements .activeSettings .settings {
+    background: url('../../assets/img/settings.png') dodgerblue no-repeat center;
+    border-radius: 56px;
+    background-size: 30px 30px;
+    width: 70px;
+    height: 56px;
+}
+
+.headerElements .offSettings .settings {
+    background: url('../../assets/img/settingsOff.png') no-repeat center;
+    border-radius: 56px;
+    background-size: 30px 30px;
+    width: 70px;
+    height: 56px;
+}
+
+/* Profile */
+.headerElements .activeProfile .profile {
+    background: url('../../assets/img/profile.png') dodgerblue no-repeat center;
+    border-radius: 56px;
+    background-size: 30px 30px;
+    width: 70px;
+    height: 56px;
+}
+
+.headerElements .offProfile .profile {
+    background: url('../../assets/img/profileOff.png') no-repeat center;
+    border-radius: 56px;
+    background-size: 30px 30px;
+    width: 70px;
+    height: 56px;
+}
+
+/* dialogs */
+.headerElements .activeDialogs .dialogs {
+    background: url('../../assets/img/dialogs.png') dodgerblue no-repeat center;
+    border-radius: 56px;
+    background-size: 30px 30px;
+    width: 70px;
+    height: 56px;
+}
+
+.headerElements .offDialogs .dialogs {
+    background: url('../../assets/img/dialogsOff.png') no-repeat center;
+    border-radius: 56px;
+    background-size: 30px 30px;
+    width: 70px;
+    height: 56px;
+}
+
+/* moon */
+.headerElements .activeMoon .moon {
+    background: url('../../assets/img/moon.png') dodgerblue no-repeat center;
+    border-radius: 56px;
+    background-size: 30px 30px;
+    width: 70px;
+    height: 56px;
+}
+
+.headerElements .offMoon .moon {
+    background: url('../../assets/img/moonOff.png') no-repeat center;
+    border-radius: 56px;
+    background-size: 30px 30px;
+    width: 70px;
+    height: 56px;
+}
+
+/* */
+
+.headerElements img {
     max-height: 30px;
     padding: 10px 20px;
 }

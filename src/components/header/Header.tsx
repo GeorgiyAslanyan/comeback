@@ -3,10 +3,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {getDialogs} from "../../redux/dialogs-selector";
 import s from "./Header.module.css"
 import {NavLink} from "react-router-dom";
-import settings from "../../assets/img/settings.png"
-import profile from "../../assets/img/profile.png"
-import moon from "../../assets/img/moon.png"
-import messages from "../../assets/img/dialogs.png"
 import {getIsAuth} from "../../redux/auth-selector";
 import offAuth from "../../assets/img/offAuth.png"
 import onAuth from "../../assets/img/onAuth.png"
@@ -40,17 +36,17 @@ const Header: React.FC = () => {
 
     return (
         <div className={s.headerElements}>
-            <NavLink to={'/settings'}>
-                <img src={settings} alt=""/>
+            <NavLink to={'/settings'} className={(navData) => navData.isActive ? s.activeSettings : s.offSettings}>
+                <div className={s.settings}/>
             </NavLink>
-            <NavLink to={'/profile'}>
-                <img src={profile} alt=""/>
+            <NavLink to={'/profile'} className={(navData) => navData.isActive ? s.activeProfile : s.offProfile}>
+                <div className={s.profile}/>
             </NavLink>
-            <NavLink to={'/dialogs'}>
-                <img src={messages} alt=""/>
+            <NavLink to={'/dialogs'} className={(navData) => navData.isActive ? s.activeDialogs : s.offDialogs}>
+                <div className={s.dialogs}/>
             </NavLink>
-            <NavLink to={'/settings'}>
-                <img src={moon} alt=""/>
+            <NavLink to={'/moon'} className={(navData) => navData.isActive ? s.activeMoon : s.offMoon}>
+                <div className={s.moon}/>
             </NavLink>
             <div className={s.authButton}>
                 {
