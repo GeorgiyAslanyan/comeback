@@ -1,5 +1,5 @@
 .headerElements {
-    min-height: 65px;
+    min-height: 56px;
     background-color: #2b3031;
     display: flex;
     justify-content: center;
@@ -7,19 +7,16 @@
 }
 
 .headerElements a {
-    padding: 0 5px;
     transition: .3s background-color, border-radius .3s;
 }
 
 .headerElements a:hover {
-    background-color: dodgerblue;
-    border-radius: 56px;
+    background-color: #363c3e;
 }
 
 /* Settings */
 .headerElements .activeSettings .settings {
-    background: url('../../assets/img/settings.png') dodgerblue no-repeat center;
-    border-radius: 56px;
+    background: url('../../assets/img/settings.png') #363c3e no-repeat center;
     background-size: 30px 30px;
     width: 70px;
     height: 56px;
@@ -27,7 +24,6 @@
 
 .headerElements .offSettings .settings {
     background: url('../../assets/img/settingsOff.png') no-repeat center;
-    border-radius: 56px;
     background-size: 30px 30px;
     width: 70px;
     height: 56px;
@@ -35,8 +31,7 @@
 
 /* Profile */
 .headerElements .activeProfile .profile {
-    background: url('../../assets/img/profile.png') dodgerblue no-repeat center;
-    border-radius: 56px;
+    background: url('../../assets/img/profile.png') #363c3e no-repeat center;
     background-size: 30px 30px;
     width: 70px;
     height: 56px;
@@ -44,7 +39,6 @@
 
 .headerElements .offProfile .profile {
     background: url('../../assets/img/profileOff.png') no-repeat center;
-    border-radius: 56px;
     background-size: 30px 30px;
     width: 70px;
     height: 56px;
@@ -52,8 +46,7 @@
 
 /* dialogs */
 .headerElements .activeDialogs .dialogs {
-    background: url('../../assets/img/dialogs.png') dodgerblue no-repeat center;
-    border-radius: 56px;
+    background: url('../../assets/img/dialogs.png') #363c3e no-repeat center;
     background-size: 30px 30px;
     width: 70px;
     height: 56px;
@@ -69,8 +62,7 @@
 
 /* moon */
 .headerElements .activeMoon .moon {
-    background: url('../../assets/img/moon.png') dodgerblue no-repeat center;
-    border-radius: 56px;
+    background: url('../../assets/img/moon.png') #363c3e no-repeat center;
     background-size: 30px 30px;
     width: 70px;
     height: 56px;
@@ -78,7 +70,6 @@
 
 .headerElements .offMoon .moon {
     background: url('../../assets/img/moonOff.png') no-repeat center;
-    border-radius: 56px;
     background-size: 30px 30px;
     width: 70px;
     height: 56px;
@@ -99,5 +90,5 @@
 }
 
 .authButton button:hover {
-    background-color: #727272;
+    background-color: #363c3e;
 }
