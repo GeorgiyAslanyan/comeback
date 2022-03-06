@@ -11,21 +11,30 @@ const Dialog: React.FC<PropsType> = () => {
     const authUserId = useSelector(getAuthUserId)
 
     return (
-        <div className={s.messages}>
-            {messages?.map(m => {
-                if (m.userId === authUserId) {
-                    return (<div key={m.id} className={s.myMessage}>
-                        <p>{m.message}</p>
-                    </div>)
-                } else {
-                    return (
-                        <div key={m.id} className={s.message}>
+        <div className={s.messageBlock}>
+            <div className={s.messages}>
+                {messages?.map(m => {
+                    if (m.userId === authUserId) {
+                        return (<div key={m.id} className={s.myMessage}>
                             <p>{m.message}</p>
-                        </div>
-                    )
-                }
-            })}
+                        </div>)
+                    } else {
+                        return (
+                            <div key={m.id} className={s.message}>
+                                <p>{m.message}</p>
+                            </div>
+                        )
+                    }
+                })}
+            </div>
+            <div className={s.messageInput}>
+                <input type="text"/>
+                <button/>
+            </div>
+            
         </div>
+        
+        
     )
 }
 

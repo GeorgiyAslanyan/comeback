@@ -17,68 +17,68 @@
 /* Settings */
 .headerElements .activeSettings .settings {
     background: url('../../assets/img/settings.png') #363c3e no-repeat center;
-    background-size: 30px 30px;
+    background-size: 20px 20px;
     width: 70px;
-    height: 56px;
+    height: 46px;
 }
 
 .headerElements .offSettings .settings {
     background: url('../../assets/img/settingsOff.png') no-repeat center;
-    background-size: 30px 30px;
+    background-size: 20px 20px;
     width: 70px;
-    height: 56px;
+    height: 46px;
 }
 
 /* Profile */
 .headerElements .activeProfile .profile {
     background: url('../../assets/img/profile.png') #363c3e no-repeat center;
-    background-size: 30px 30px;
+    background-size: 20px 20px;
     width: 70px;
-    height: 56px;
+    height: 46px;
 }
 
 .headerElements .offProfile .profile {
     background: url('../../assets/img/profileOff.png') no-repeat center;
-    background-size: 30px 30px;
+    background-size: 20px 20px;
     width: 70px;
-    height: 56px;
+    height: 46px;
 }
 
 /* dialogs */
 .headerElements .activeDialogs .dialogs {
     background: url('../../assets/img/dialogs.png') #363c3e no-repeat center;
-    background-size: 30px 30px;
+    background-size: 20px 20px;
     width: 70px;
-    height: 56px;
+    height: 46px;
 }
 
 .headerElements .offDialogs .dialogs {
     background: url('../../assets/img/dialogsOff.png') no-repeat center;
     border-radius: 56px;
-    background-size: 30px 30px;
+    background-size: 20px 20px;
     width: 70px;
-    height: 56px;
+    height: 46px;
 }
 
 /* moon */
 .headerElements .activeMoon .moon {
     background: url('../../assets/img/moon.png') #363c3e no-repeat center;
-    background-size: 30px 30px;
+    background-size: 20px 20px;
     width: 70px;
-    height: 56px;
+    height: 46px;
 }
 
 .headerElements .offMoon .moon {
     background: url('../../assets/img/moonOff.png') no-repeat center;
-    background-size: 30px 30px;
+    background-size: 20px 20px;
     width: 70px;
-    height: 56px;
+    height: 46px;
 }
 
 /* */
 
 .headerElements img {
-    max-height: 30px;
+    max-height: 20px;
     padding: 10px 20px;
 }
 
