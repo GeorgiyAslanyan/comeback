@@ -19,3 +19,61 @@
     height: 500px;
     background-color: #363c3e;
 }
+
+.profileSection{
+    text-align: left;
+    height: 28%;
+    background-color: rgb(0, 97, 224);
+}
+
+.profileSection img{
+    margin: 20px 0 0 20px;
+    width: 50px;
+    border-radius: 55px;
+}
+
+.profileInfo {
+    display: flex;
+}
+
+.leftColumn {
+
+}
+
+.rightColumn {
+    margin: 35px 10px 0 auto;
+    font-weight: 300;
+}
+
+.profileName {
+    font-weight: 600;
+    margin: 10px 0 0 20px;
+    font-size: 20px;
+}
+
+.profileStatus {
+    margin: 0 20px;
+    font-size: 15px;
+    color: white;
+}
+
+
+.closeBtn {
+    background: url("../../assets/img/close.png") no-repeat center;
+    background-size: 30px 30px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: 10px;
+    left: 0;
+    right: 0;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity .3s;
+}
+
+.closeBtn:hover {
+    opacity: 1;
+}

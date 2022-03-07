@@ -13,7 +13,7 @@ import disconnect from "../../assets/audio/disconnect.mp3"
 import Settings from "../settings/Settings";
 
 const Header: React.FC = () => {
-    const [show, setShow] = useState<boolean>()
+    const [show, setShow] = useState<boolean>(false)
     const dialogs = useSelector(getDialogs)
     let isAuth = useSelector(getIsAuth)
     const dispatch = useDispatch()

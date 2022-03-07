@@ -5,8 +5,9 @@ let initialState = {
     filter: null as string | null,
     userId: 0 as number | null,
     userImg: null as string | null,
-    userName: "Georgiy Aslanyan" as string | null,
-    status: "nothing else" as string | null
+    userName: "Georgiy" as string | null,
+    status: "nothing else" as string | null,
+    phone: "+7 912 044 18 73" as string | null
 }
 
 const profileReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
