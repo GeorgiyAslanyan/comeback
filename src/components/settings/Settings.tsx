@@ -1,10 +1,12 @@
-import React from "react";
+import React, {Dispatch, SetStateAction} from "react";
 import { useSelector } from "react-redux";
 import {getIsAuth} from "../../redux/auth-selector";
 import Login from "../login/Login";
 import s from "./Settings.module.css"
 
-type PropsType = {}
+type PropsType = {
+    setShow?: Dispatch<SetStateAction<boolean | undefined>>
+}
 
 const Settings: React.FC<PropsType> = () => {
     const isAuth = useSelector(getIsAuth)
@@ -13,8 +15,10 @@ const Settings: React.FC<PropsType> = () => {
         return <Login/>
     } else {
         return (
-            <div className={s.settings}>
-                settings
+            <div className={s.settingsBackground}>
+                <div className={s.settings}>
+                    Настройки
+                </div>
             </div>
         )
     }

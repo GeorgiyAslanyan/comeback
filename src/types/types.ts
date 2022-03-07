@@ -8,7 +8,8 @@ export type DialogsType = {
 export type MessageType = {
     id: number | null
     userId: number | null
-    name: string | null
+    name?: string | null
     message: string | null
-    img: string | null
+    img?: string | null
+    time: string | null
 }

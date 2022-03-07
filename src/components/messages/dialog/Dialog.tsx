@@ -1,14 +1,20 @@
 import React from "react";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import s from './dialog.module.css'
 import {getDialog} from "../../../redux/dialog-selector";
 import {getAuthUserId} from "../../../redux/auth-selector";
+import {addMessage} from "../../../redux/dialog-reducer";
 
 type PropsType = {}
 
 const Dialog: React.FC<PropsType> = () => {
     const messages = useSelector(getDialog)
     const authUserId = useSelector(getAuthUserId)
+    const dispatch = useDispatch()
+
+    const onAddMessage = (message: string) => {
+        addMessage(message)
+    }
 
     return (
         <div className={s.messageBlock}>
@@ -17,24 +23,23 @@ const Dialog: React.FC<PropsType> = () => {
                     if (m.userId === authUserId) {
                         return (<div key={m.id} className={s.myMessage}>
                             <p>{m.message}</p>
+                            <div className={s.messageDate}>{m.time}</div>
                         </div>)
                     } else {
                         return (
                             <div key={m.id} className={s.message}>
                                 <p>{m.message}</p>
+                                <div className={s.messageDate}>{m.time}</div>
                             </div>
                         )
                     }
                 })}
             </div>
             <div className={s.messageInput}>
-                <input type="text"/>
-                <button/>
+                <textarea name="" id="" placeholder={'Написать сообщение...'}/>
+                <button onClick={()=>onAddMessage}/>
             </div>
-            
         </div>
-        
-        
     )
 }
 

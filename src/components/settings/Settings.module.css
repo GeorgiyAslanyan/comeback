@@ -1,4 +1,21 @@
+.settingsBackground {
+    top: 56px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.52);
+    height: calc(100vh - 56px);
+    width: 100%;
+}
+
 .settings {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    text-align: center;
+    position: absolute;
+    width: 400px;
+    height: 500px;
     background-color: #363c3e;
-    min-height: calc(100vh - 56px);
 }

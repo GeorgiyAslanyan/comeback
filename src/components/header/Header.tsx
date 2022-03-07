@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useReducer, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getDialogs} from "../../redux/dialogs-selector";
 import s from "./Header.module.css"
@@ -10,8 +10,10 @@ import {setIsAuth} from "../../redux/auth-reducer"
 import click from "../../assets/audio/click.mp3"
 import authorize from "../../assets/audio/Authorize.mp3"
 import disconnect from "../../assets/audio/disconnect.mp3"
+import Settings from "../settings/Settings";
 
 const Header: React.FC = () => {
+    const [show, setShow] = useState<boolean>()
     const dialogs = useSelector(getDialogs)
     let isAuth = useSelector(getIsAuth)
     const dispatch = useDispatch()
@@ -41,38 +43,64 @@ const Header: React.FC = () => {
         dispatch(setIsAuth(true))
     }
 
+    const onSettingClick = () => {
+        let audio = new Audio(click)
+        audio.autoplay = true
+        if (show === true) {
+            setShow(false)
+        } else {
+            setShow(true)
+        }
+    }
+
     const audioPlay = () => {
         let audio = new Audio(click)
         audio.autoplay = true
     }
 
     return (
-        <div className={s.headerElements}>
-            <NavLink onClick={() => audioPlay()} to={'/settings'} className={(navData) => navData.isActive ? s.activeSettings : s.offSettings}>
-                <div className={s.settings}/>
-            </NavLink>
-            <NavLink onClick={() => audioPlay()} to={'/profile'} className={(navData) => navData.isActive ? s.activeProfile : s.offProfile}>
-                <div className={s.profile}/>
-            </NavLink>
-            <NavLink onClick={() => audioPlay()} to={'/dialogs'} className={(navData) => navData.isActive ? s.activeDialogs : s.offDialogs}>
-                <div className={s.dialogs}/>
-            </NavLink>
-            <NavLink onClick={() => audioPlay()} to={'/moon'} className={(navData) => navData.isActive ? s.activeMoon : s.offMoon}>
-                <div className={s.moon}/>
-            </NavLink>
-            <div className={s.authButton}>
+        <div>
+            <div className={s.headerMenu}>
+                {show === true
+                    ? <Settings setShow={setShow}/>
+                    : null}
+            </div>
+            <div className={s.headerElements}>
                 {
-                    isAuth
-                        ? <button onClick={() => offButton()}>
-                            <img src={onAuth} alt=""/>
+                    show
+                        ? <button onClick={() => onSettingClick()} className={s.activeSettings}>
+                            <div className={s.settings}/>
                         </button>
-                        : <button onClick={() => onButton()}>
-                            <img src={offAuth} alt=""/>
+                        : <button onClick={() => onSettingClick()} className={s.offSettings}>
+                            <div className={s.settings}/>
                         </button>
                 }
+                <NavLink onClick={() => audioPlay()} to={'/profile'}
+                         className={(navData) => navData.isActive ? s.activeProfile : s.offProfile}>
+                    <div className={s.profile}/>
+                </NavLink>
+                <NavLink onClick={() => audioPlay()} to={'/dialogs'}
+                         className={(navData) => navData.isActive ? s.activeDialogs : s.offDialogs}>
+                    <div className={s.dialogs}/>
+                </NavLink>
+                <NavLink onClick={() => audioPlay()} to={'/moon'}
+                         className={(navData) => navData.isActive ? s.activeMoon : s.offMoon}>
+                    <div className={s.moon}/>
+                </NavLink>
+                <div className={s.authButton}>
+                    {
+                        isAuth
+                            ? <button onClick={() => offButton()}>
+                                <img src={onAuth} alt=""/>
+                            </button>
+                            : <button onClick={() => onButton()}>
+                                <img src={offAuth} alt=""/>
+                            </button>
+                    }
+                </div>
             </div>
-
         </div>
+
     )
 }
 
