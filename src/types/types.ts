@@ -13,3 +13,10 @@ export type MessageType = {
     img?: string | null
     time: string | null
 }
+
+export type UsersType = {
+    id: number | null
+    name: string |null
+    isFollowed: boolean
+    img: string | null
+}

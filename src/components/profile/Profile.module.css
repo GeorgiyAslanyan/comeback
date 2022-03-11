@@ -1,4 +1,135 @@
 .profile {
+    display: block;
     background-color: #363c3e;
     min-height: calc(100vh - 56px);
+    padding: 10px;
+}
+
+.profileMenu {
+    display: flex;
+    justify-content: center;
+}
+
+.activeSearch,
+.activeFriends,
+.offFriends,
+.offSearch{
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    height: 40px;
+}
+
+.offFriends,
+.offSearch {
+    border: solid 2px #a3a3a3;
+}
+
+.activeSearch,
+.activeFriends {
+    border: solid 2px #0061e1;
+}
+
+.offFriends:hover,
+.offSearch:hover {
+    border: solid 2px #0061e1;
+}
+
+.activeFriends h2,
+.offFriends h2,
+.activeSearch h2,
+.offSearch h2{
+    margin: 0;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.activeFriends .friendsButton,
+.friendsButton {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.friendsButton {
+    background: url("../../assets/img/friendsOff.png") no-repeat center;
+    background-size: 20px 20px;
+}
+
+.activeFriends .friendsButton {
+    background: url("../../assets/img/friends.png") no-repeat center;
+    background-size: 20px 20px;
+}
+
+.activeSearch .searchButton,
+.searchButton {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.searchButton {
+    background: url("../../assets/img/searchOff.png") no-repeat center;
+    background-size: 20px 20px;
+}
+
+.activeSearch .searchButton {
+    background: url("../../assets/img/search.png") no-repeat center;
+    background-size: 20px 20px;
+}
+
+.users {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.user {
+    background-color: #2b3031;
+    margin: 10px;
+    padding: 10px;
+}
+
+.userPrev {
+    display: flex;
+}
+
+.user img {
+    border-radius: 80px;
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+}
+
+.userInfo {
+    padding: 10px;
+}
+
+.userInfo h2 {
+    margin: 0;
+    color: white;
+}
+
+.follow,
+.unfollow{
+    cursor: pointer;
+    border: 0;
+    padding: 10px;
+    min-width: 100px;
+    margin: 10px 10px 10px 0;
+    background-color: #363c3e;
+}
+
+.follow {
+    color: #0061e1;
+}
+
+.unfollow {
+    color: red;
+}
+
+.follow:hover,
+.unfollow:hover {
+    background-color: #404a4b;
 }

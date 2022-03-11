@@ -4,7 +4,7 @@ import {BaseThunkType, InferActionsTypes} from "./redux-store";
 let initialState = {
     filter: null as string | null,
     userId: 1 as number | null,
-    isAuth: false as boolean
+    isAuth: true as boolean
 }
 
 const authReducer = (state = initialState, action: ActionsTypes): InitialStateType => {

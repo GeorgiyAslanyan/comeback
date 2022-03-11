@@ -4,12 +4,14 @@ import authReducer from "./auth-reducer";
 import dialogReducer from "./dialog-reducer";
 import dialogsReducer from "./dialogs-reducer";
 import profileReducer from "./profile-reducer";
+import usersReducer from "./users-reducer";
 
 let rootReducer = combineReducers({
     dialogs: dialogsReducer,
     dialog: dialogReducer,
     auth: authReducer,
-    profile: profileReducer
+    profile: profileReducer,
+    users: usersReducer
 })
 
 type RootReducerType = typeof rootReducer
