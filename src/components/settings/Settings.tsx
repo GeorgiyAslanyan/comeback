@@ -1,9 +1,9 @@
 import React, {Dispatch, SetStateAction} from "react";
 import { useSelector } from "react-redux";
 import {getIsAuth} from "../../redux/auth-selector";
-import Login from "../login/Login";
 import s from "./Settings.module.css"
 import {getUserImg, getUserName, getUserPhone, getUserStatus} from "../../redux/profile-selector";
+import Login from "../../pages/login/Login";
 
 type PropsType = {
     setShow?: Dispatch<SetStateAction<boolean>>

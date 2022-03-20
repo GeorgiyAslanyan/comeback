@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom";
 import {getIsAuth} from "../../redux/auth-selector";
 import offAuth from "../../assets/img/onAuth.png"
 import onAuth from "../../assets/img/offAuth.png"
-import {setIsAuth} from "../../redux/auth-reducer"
+import {setIsAuth, setUserData} from "../../redux/auth-reducer"
 import click from "../../assets/audio/click.mp3"
 import authorize from "../../assets/audio/Authorize.mp3"
 import disconnect from "../../assets/audio/disconnect.mp3"
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
     }
 
     useEffect(() => {
-
+        dispatch(setUserData())
     }, [isAuth])
 
     const offButton = () => {

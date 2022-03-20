@@ -27,6 +27,7 @@
 
 
 .myMessage {
+    max-width: 400px;
     margin: 5px 5px 5px auto;
     padding: 0px 10px;
     background-color: rgb(0, 97, 224);
@@ -40,6 +41,7 @@
 }
 
 .message {
+    max-width: 400px;
     margin: 5px auto 5px 5px;
     padding: 0px 10px;
     background-color: #eaeaea;
@@ -54,10 +56,14 @@
 }
 
 .myMessage .messageDate {
+    margin-top: auto;
+    margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.75);
 }
 
 .messageDate {
+    margin-top: auto;
+    margin-bottom: 8px;
     padding: 9px 0 0 5px;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.52);
